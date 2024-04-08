@@ -1,0 +1,1208 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     47137,       1200]
+NotebookOptionsPosition[     45975,       1174]
+NotebookOutlinePosition[     46600,       1196]
+CellTagsIndexPosition[     46557,       1193]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{"General", " ", "settings", " ", "for", " ", "notebook"}], " ", 
+   "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"ClearAll", "[", "\"\<Global`*\>\"", "]"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"SetDirectory", "[", 
+     RowBox[{"NotebookDirectory", "[", "]"}], "]"}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"<<", "MaTeX`"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"SetOptions", "[", 
+     RowBox[{"MaTeX", ",", 
+      RowBox[{"FontSize", "\[Rule]", "11"}]}], "]"}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"cm", "=", 
+     RowBox[{"72", "/", "2.54"}]}], ";"}]}]}]], "Input",
+ CellChangeTimes->{
+  3.921072214845986*^9, 3.921072350185178*^9, {3.921072643326003*^9, 
+   3.9210726435361304`*^9}, 3.921072679959708*^9, {3.9210728994940166`*^9, 
+   3.921072900959277*^9}, {3.9210748546692376`*^9, 3.921074858057963*^9}, {
+   3.9210751625555964`*^9, 3.921075168031297*^9}, 3.9210751980908556`*^9, {
+   3.921075547940501*^9, 3.921075549842291*^9}, {3.921076120228835*^9, 
+   3.921076128360858*^9}, 3.9214984660152936`*^9},
+ CellLabel->
+  "In[179]:=",ExpressionUUID->"906765b6-40b8-44bb-a63e-c3e9e96a3f42"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{"Define", " ", "the", " ", "system"}], " ", "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"f", "[", 
+      RowBox[{"x_", ",", "y_"}], "]"}], "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"x", "^", "2"}], "*", "y"}], "+", 
+      RowBox[{"y", "^", "3"}], "-", 
+      RowBox[{"8", "*", "x", "*", "y"}], "-", 
+      RowBox[{"10", "*", 
+       RowBox[{"y", "^", "2"}]}], "+", 
+      RowBox[{"16", "*", "y"}]}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"g", "[", 
+      RowBox[{"x_", ",", "y_"}], "]"}], "=", 
+     RowBox[{
+      RowBox[{"x", "^", "3"}], "+", 
+      RowBox[{"x", "*", 
+       RowBox[{"y", "^", "2"}]}], "+", 
+      RowBox[{"12", "*", 
+       RowBox[{"x", "^", "2"}]}], "-", 
+      RowBox[{"64", "*", "x"}]}]}], ";"}]}]}]], "Input",
+ CellChangeTimes->{{3.9210722297201195`*^9, 3.921072347429981*^9}},
+ CellLabel->
+  "In[184]:=",ExpressionUUID->"7a873371-c13c-4f57-b8ac-69a9da35f07c"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "Task", " ", "1.", " ", "Determine", " ", "the", " ", "nullclines"}], " ", 
+   "*)"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{"y", " ", "nullclines"}], " ", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"ynullclin", "=", 
+    RowBox[{"Solve", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"g", "[", 
+        RowBox[{"x", ",", "y"}], "]"}], "==", "0"}], ",", "x"}], "]"}]}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{"x", " ", "nullclines"}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{"xnullclin", "=", 
+    RowBox[{"Solve", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"f", "[", 
+        RowBox[{"x", ",", "y"}], "]"}], "==", "0"}], ",", "y"}], 
+     "]"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.921072323988196*^9, 3.921072445826674*^9}, {
+  3.9210789421665726`*^9, 3.9210789527163415`*^9}, {3.9210798946459336`*^9, 
+  3.9210798971324606`*^9}, {3.921079937956812*^9, 3.921079952324458*^9}, {
+  3.9210803033769836`*^9, 3.921080315391164*^9}, {3.9210829911427813`*^9, 
+  3.9210829982507267`*^9}, {3.9214954840553017`*^9, 3.921495485190315*^9}, {
+  3.921495526872361*^9, 3.921495535970214*^9}},
+ CellLabel->
+  "In[186]:=",ExpressionUUID->"e2d3043b-5b53-4fb5-ac4a-7faeeedd0061"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "Task", " ", "2.", " ", "Find", " ", "equilibirum", " ", "points"}], " ", 
+   "*)"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{"Finding", " ", "equilibrium", " ", "points"}], " ", "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"equilibpoints", "=", 
+    RowBox[{"Solve", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"f", "[", 
+         RowBox[{"x", ",", "y"}], "]"}], "==", "0"}], "&&", 
+       RowBox[{
+        RowBox[{"g", "[", 
+         RowBox[{"x", ",", "y"}], "]"}], "==", "0"}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"x", ",", "y"}], "}"}]}], "]"}]}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"equ1x", "=", 
+     RowBox[{"equilibpoints", "[", 
+      RowBox[{"[", 
+       RowBox[{"1", ",", "1", ",", "2"}], "]"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"equ1y", "=", 
+     RowBox[{"equilibpoints", "[", 
+      RowBox[{"[", 
+       RowBox[{"1", ",", "2", ",", "2"}], "]"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"equ2x", "=", 
+     RowBox[{"equilibpoints", "[", 
+      RowBox[{"[", 
+       RowBox[{"2", ",", "1", ",", "2"}], "]"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"equ2y", "=", 
+     RowBox[{"equilibpoints", "[", 
+      RowBox[{"[", 
+       RowBox[{"2", ",", "2", ",", "2"}], "]"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"equ3x", "=", 
+     RowBox[{"equilibpoints", "[", 
+      RowBox[{"[", 
+       RowBox[{"3", ",", "1", ",", "2"}], "]"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"equ3y", "=", 
+     RowBox[{"equilibpoints", "[", 
+      RowBox[{"[", 
+       RowBox[{"3", ",", "2", ",", "2"}], "]"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"equ4x", "=", 
+     RowBox[{"equilibpoints", "[", 
+      RowBox[{"[", 
+       RowBox[{"4", ",", "1", ",", "2"}], "]"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"equ4y", "=", 
+     RowBox[{"equilibpoints", "[", 
+      RowBox[{"[", 
+       RowBox[{"4", ",", "2", ",", "2"}], "]"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"equ5x", "=", 
+     RowBox[{"equilibpoints", "[", 
+      RowBox[{"[", 
+       RowBox[{"5", ",", "1", ",", "2"}], "]"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"equ5y", "=", 
+     RowBox[{"equilibpoints", "[", 
+      RowBox[{"[", 
+       RowBox[{"5", ",", "2", ",", "2"}], "]"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{"Sketching", " ", "nullclines"}], " ", "*)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"xticks", "=", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "20"}], ",", "10"}], "}"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"yticks", "=", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "15"}], ",", "15"}], "}"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"xlabel", "=", "\"\<x\>\""}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"ylabel", "=", "\"\<y\>\""}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"origin", "=", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "100"}], ",", 
+       RowBox[{"-", "100"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"PBstyle", " ", "=", " ", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Frame", "->", "True"}], ",", " ", 
+       RowBox[{"FrameStyle", "->", 
+        RowBox[{"Directive", "[", 
+         RowBox[{"Black", ",", " ", 
+          RowBox[{"Thickness", "[", "0.003", "]"}], ",", "  ", "11", ",", " ", 
+          RowBox[{"FontFamily", "->", "\"\<Latin Modern Math\>\""}]}], 
+         "]"}]}], ",", " ", 
+       RowBox[{"GridLines", "->", "Automatic"}], ",", 
+       RowBox[{"ImagePadding", "->", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"40", ",", "7"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"35", ",", "6"}], "}"}]}], "}"}]}]}], "}"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"nullplot1", "=", 
+     RowBox[{"ParametricPlot", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"ynullclin", "[", 
+             RowBox[{"[", 
+              RowBox[{"1", ",", "1", ",", "2"}], "]"}], "]"}], "/.", 
+            RowBox[{"y", "->", "u"}]}], ",", "u"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"ynullclin", "[", 
+             RowBox[{"[", 
+              RowBox[{"2", ",", "1", ",", "2"}], "]"}], "]"}], "/.", 
+            RowBox[{"y", "->", "u"}]}], ",", "u"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"ynullclin", "[", 
+             RowBox[{"[", 
+              RowBox[{"3", ",", "1", ",", "2"}], "]"}], "]"}], "/.", 
+            RowBox[{"y", "->", "u"}]}], ",", "u"}], "}"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"u", ",", 
+         RowBox[{"Min", "[", "yticks", "]"}], ",", 
+         RowBox[{"Max", "[", "yticks", "]"}]}], "}"}], ",", " ", 
+       RowBox[{"Evaluate", "@", "PBstyle"}], ",", 
+       RowBox[{"PlotStyle", "->", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"Red", ",", " ", 
+            RowBox[{"Thickness", "[", "0.005", "]"}]}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"Red", ",", " ", 
+            RowBox[{"Thickness", "[", "0.005", "]"}]}], "}"}]}], " ", "}"}]}],
+        ",", 
+       RowBox[{"PlotRange", "->", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"Min", "[", "xticks", "]"}], ",", " ", 
+            RowBox[{"Max", "[", "xticks", "]"}]}], "}"}], ",", " ", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"Min", "[", "yticks", "]"}], ",", " ", 
+            RowBox[{"Max", "[", "yticks", "]"}]}], "}"}]}], "}"}]}], ",", " ", 
+       RowBox[{"AxesOrigin", "->", "origin"}], ",", " ", 
+       RowBox[{"FrameLabel", "->", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"MaTeX", "[", "xlabel", "]"}], ",", " ", 
+          RowBox[{"MaTeX", "[", "ylabel", "]"}]}], "}"}]}], ",", " ", 
+       RowBox[{"ImageSize", "->", 
+        RowBox[{"{", 
+         RowBox[{"{", "300", "}"}], "}"}]}], ",", 
+       RowBox[{"PlotLegends", "->", 
+        RowBox[{"Placed", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"MaTeX", "[", "\"\<x ~ \\\\mathrm{nullclines}\>\"", "]"}], 
+           "}"}], ",", "Right"}], "]"}]}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"nullplot2", "=", 
+     RowBox[{"ParametricPlot", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"u", ",", 
+           RowBox[{
+            RowBox[{"xnullclin", "[", 
+             RowBox[{"[", 
+              RowBox[{"1", ",", "1", ",", "2"}], "]"}], "]"}], "/.", 
+            RowBox[{"x", "->", "u"}]}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"u", ",", 
+           RowBox[{
+            RowBox[{"xnullclin", "[", 
+             RowBox[{"[", 
+              RowBox[{"2", ",", "1", ",", "2"}], "]"}], "]"}], "/.", 
+            RowBox[{"x", "->", "u"}]}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"u", ",", 
+           RowBox[{
+            RowBox[{"xnullclin", "[", 
+             RowBox[{"[", 
+              RowBox[{"3", ",", "1", ",", "2"}], "]"}], "]"}], "/.", 
+            RowBox[{"x", "->", "u"}]}]}], "}"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"u", ",", 
+         RowBox[{"Min", "[", "xticks", "]"}], ",", 
+         RowBox[{"Max", "[", "xticks", "]"}]}], "}"}], ",", " ", 
+       RowBox[{"Evaluate", "@", "PBstyle"}], ",", 
+       RowBox[{"PlotStyle", "->", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"Blue", ",", " ", 
+            RowBox[{"Thickness", "[", "0.005", "]"}]}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"Blue", ",", " ", 
+            RowBox[{"Thickness", "[", "0.005", "]"}]}], "}"}]}], " ", "}"}]}],
+        ",", 
+       RowBox[{"PlotRange", "->", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"Min", "[", "xticks", "]"}], ",", " ", 
+            RowBox[{"Max", "[", "xticks", "]"}]}], "}"}], ",", " ", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"Min", "[", "yticks", "]"}], ",", " ", 
+            RowBox[{"Max", "[", "yticks", "]"}]}], "}"}]}], "}"}]}], ",", " ", 
+       RowBox[{"AxesOrigin", "->", "origin"}], ",", " ", 
+       RowBox[{"FrameLabel", "->", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"MaTeX", "[", "xlabel", "]"}], ",", " ", 
+          RowBox[{"MaTeX", "[", "ylabel", "]"}]}], "}"}]}], ",", " ", 
+       RowBox[{"ImageSize", "->", 
+        RowBox[{"{", 
+         RowBox[{"{", "300", "}"}], "}"}]}], ",", 
+       RowBox[{"PlotLegends", "->", 
+        RowBox[{"Placed", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"MaTeX", "[", "\"\<y ~ \\\\mathrm{nullclines}\>\"", "]"}], 
+           "}"}], ",", "Right"}], "]"}]}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"eqplot", "=", 
+     RowBox[{"ListPlot", "[", 
+      RowBox[{
+       RowBox[{"{", " ", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"equ1x", ",", "equ1y"}], "}"}], ",", " ", 
+         RowBox[{"{", 
+          RowBox[{"equ2x", ",", "equ2y"}], "}"}], ",", " ", 
+         RowBox[{"{", 
+          RowBox[{"equ3x", ",", "equ3y"}], "}"}], ",", " ", 
+         RowBox[{"{", 
+          RowBox[{"equ4x", ",", "equ4y"}], "}"}], ",", " ", 
+         RowBox[{"{", 
+          RowBox[{"equ5x", ",", "equ5y"}], "}"}]}], "}"}], ",", " ", 
+       RowBox[{"Evaluate", "@", "PBstyle"}], ",", 
+       RowBox[{"PlotStyle", "->", 
+        RowBox[{"{", 
+         RowBox[{"Black", ",", 
+          RowBox[{"PointSize", "[", "0.02", "]"}]}], "}"}]}], ",", 
+       RowBox[{"PlotRange", "->", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"Min", "[", "xticks", "]"}], ",", " ", 
+            RowBox[{"Max", "[", "xticks", "]"}]}], "}"}], ",", " ", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"Min", "[", "yticks", "]"}], ",", " ", 
+            RowBox[{"Max", "[", "yticks", "]"}]}], "}"}]}], "}"}]}], ",", " ", 
+       RowBox[{"AxesOrigin", "->", "origin"}], ",", " ", 
+       RowBox[{"FrameLabel", "->", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"MaTeX", "[", "xlabel", "]"}], ",", " ", 
+          RowBox[{"MaTeX", "[", "ylabel", "]"}]}], "}"}]}], ",", " ", 
+       RowBox[{"ImageSize", "->", 
+        RowBox[{"{", 
+         RowBox[{"{", "300", "}"}], "}"}]}], ",", 
+       RowBox[{"PlotLegends", "->", 
+        RowBox[{"Placed", "[", 
+         RowBox[{
+          RowBox[{"SwatchLegend", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+             "MaTeX", "[", "\"\<\\\\mathrm{equilibrium ~ points}\>\"", "]"}], 
+             "}"}], ",", 
+            RowBox[{"LegendMarkerSize", "->", "5.0"}], ",", 
+            RowBox[{"LegendMarkers", "->", "\"\<Bubble\>\""}]}], "]"}], ",", 
+          " ", "Right"}], "]"}]}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"Legending`LegendDump`$DefaultMarkerStyle", "=", 
+    RowBox[{"EdgeForm", "[", "]"}]}], "\[IndentingNewLine]", 
+   RowBox[{"Show", "[", 
+    RowBox[{"nullplot1", ",", " ", "nullplot2", ",", " ", "eqplot", ",", 
+     RowBox[{"ImageSize", "\[Rule]", 
+      RowBox[{"10", "cm"}]}]}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Export", "[", 
+     RowBox[{"\"\<task2_nullplot.pdf\>\"", ",", " ", 
+      RowBox[{"Show", "[", 
+       RowBox[{"nullplot1", ",", " ", "nullplot2", ",", " ", "eqplot", ",", 
+        RowBox[{"ImageSize", "\[Rule]", 
+         RowBox[{"10", "cm"}]}]}], "]"}], ",", " ", 
+      RowBox[{"ImageResolution", "->", "1000"}]}], "]"}], ";"}]}]}]], "Input",
+ CellChangeTimes->{{3.921072472875282*^9, 3.921072582731721*^9}, {
+   3.9210726150291595`*^9, 3.921072623548707*^9}, {3.9210726966810684`*^9, 
+   3.921072881849191*^9}, {3.9210729217765665`*^9, 3.921072987950635*^9}, {
+   3.9210731117629194`*^9, 3.9210731239793077`*^9}, 3.9210731905701523`*^9, {
+   3.9210733638933735`*^9, 3.9210733691074553`*^9}, {3.921073450299926*^9, 
+   3.92107359392562*^9}, {3.921073861372344*^9, 3.9210741744285355`*^9}, {
+   3.921074272401084*^9, 3.9210743281314473`*^9}, {3.9210743934835634`*^9, 
+   3.9210745992719927`*^9}, {3.9210747247416573`*^9, 
+   3.9210747433411026`*^9}, {3.921074782206312*^9, 3.921074816574112*^9}, {
+   3.921074877151515*^9, 3.921074893065279*^9}, {3.9210749439881105`*^9, 
+   3.921074960897087*^9}, {3.9210750708546705`*^9, 3.921075131204863*^9}, {
+   3.9210752148035135`*^9, 3.9210755111629825`*^9}, {3.921075556852267*^9, 
+   3.9210756199628315`*^9}, {3.921075665432387*^9, 3.921075867348836*^9}, {
+   3.9210759065365086`*^9, 3.9210761343829393`*^9}, {3.9210763094408455`*^9, 
+   3.921076323980953*^9}, {3.9210765333369875`*^9, 3.9210765776759357`*^9}, {
+   3.921076640965461*^9, 3.921076645669129*^9}, {3.9210795777795963`*^9, 
+   3.921079678077927*^9}, {3.921079981843301*^9, 3.921079984287986*^9}, {
+   3.9210802865964108`*^9, 3.9210802903381615`*^9}, {3.9210803243958406`*^9, 
+   3.9210806509858027`*^9}, {3.921080718177226*^9, 3.921080724512151*^9}, {
+   3.9210807825748153`*^9, 3.9210808331006265`*^9}, {3.921080917506304*^9, 
+   3.9210809285324717`*^9}, {3.9210809669138794`*^9, 3.921080979901697*^9}, {
+   3.9210810212980623`*^9, 3.9210810716935167`*^9}, {3.921081102907277*^9, 
+   3.921081309234166*^9}, {3.9210813827914925`*^9, 3.9210814342758636`*^9}, {
+   3.9210814715876894`*^9, 3.921081572497778*^9}, {3.9210816028000064`*^9, 
+   3.921081713426819*^9}, {3.9210817608310547`*^9, 3.921082145069019*^9}, {
+   3.9210822608681784`*^9, 3.921082448239123*^9}, {3.921082501174444*^9, 
+   3.9210825327662735`*^9}, {3.921082622174311*^9, 3.921082748458605*^9}, {
+   3.921082827777272*^9, 3.921082863340088*^9}, {3.9211703347159166`*^9, 
+   3.9211704357891226`*^9}, {3.92149552687846*^9, 3.9214955359832125`*^9}, {
+   3.921497876081348*^9, 3.9214978933923674`*^9}, {3.921498296121353*^9, 
+   3.9214983283123016`*^9}, {3.9214984435205956`*^9, 3.921498469906106*^9}, 
+   3.9214985165862074`*^9},
+ CellLabel->
+  "In[188]:=",ExpressionUUID->"b26233b3-721f-40dd-9a69-05ee6eb948ed"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+    "Task", " ", "3.", " ", "Linearized", " ", "differential", " ", 
+     "equation"}], ",", " ", 
+    RowBox[{
+    "type", " ", "of", " ", "fixed", " ", "points", " ", "and", " ", 
+     "corresponding", " ", "eigenvectors"}]}], " ", "*)"}], 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{"The", " ", "Jacobian"}], " ", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"J", "=", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"D", "[", 
+         RowBox[{
+          RowBox[{"f", "[", 
+           RowBox[{"x", ",", "y"}], "]"}], ",", "x"}], "]"}], ",", " ", 
+        RowBox[{"D", "[", 
+         RowBox[{
+          RowBox[{"f", "[", 
+           RowBox[{"x", ",", "y"}], "]"}], ",", "y"}], "]"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"D", "[", 
+         RowBox[{
+          RowBox[{"g", "[", 
+           RowBox[{"x", ",", "y"}], "]"}], ",", "x"}], "]"}], ",", " ", 
+        RowBox[{"D", "[", 
+         RowBox[{
+          RowBox[{"g", "[", 
+           RowBox[{"x", ",", "y"}], "]"}], ",", "y"}], "]"}]}], "}"}]}], 
+     "}"}]}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"MaTeX", "[", 
+    RowBox[{"\"\<\\\\mathrm{1. ~ eq. ~ point}\>\"", ",", " ", 
+     RowBox[{"FontSize", "->", "14"}]}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"J1", "=", 
+    RowBox[{"J", "/.", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"x", "->", "equ1x"}], ",", " ", 
+       RowBox[{"y", "->", "equ1y"}]}], "}"}]}]}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"tr1", "=", 
+     RowBox[{"Tr", "[", "J1", "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"det1", "=", 
+     RowBox[{"Det", "[", "J1", "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"eig1", "=", 
+    RowBox[{"Eigenvalues", "[", "J1", "]"}]}], "\[IndentingNewLine]", 
+   RowBox[{"vec1", "=", 
+    RowBox[{"Eigenvectors", "[", "J1", "]"}]}], "\[IndentingNewLine]", 
+   RowBox[{"MaTeX", "[", 
+    RowBox[{
+    "\"\<\\\\lambda_1 \\\\cdot \\\\lambda_2<0: \\\\mathrm{Saddle ~ \
+point}\>\"", ",", " ", 
+     RowBox[{"FontSize", "->", "14"}]}], "]"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"Print", "[", "\"\< \>\"", "]"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"MaTeX", "[", 
+    RowBox[{"\"\<\\\\mathrm{2. ~ eq. ~ point}\>\"", ",", " ", 
+     RowBox[{"FontSize", "->", "14"}]}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"J2", "=", 
+    RowBox[{"J", "/.", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"x", "->", "equ2x"}], ",", " ", 
+       RowBox[{"y", "->", "equ2y"}]}], "}"}]}]}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"tr2", "=", 
+     RowBox[{"Tr", "[", "J2", "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"det2", "=", 
+     RowBox[{"Det", "[", "J2", "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"eig2", "=", 
+    RowBox[{"Eigenvalues", "[", "J2", "]"}]}], "\[IndentingNewLine]", 
+   RowBox[{"vec2", "=", 
+    RowBox[{"Eigenvectors", "[", "J2", "]"}]}], "\[IndentingNewLine]", 
+   RowBox[{"MaTeX", "[", 
+    RowBox[{
+    "\"\<\\\\lambda_1 \\\\cdot \\\\lambda_2<0: \\\\mathrm{Saddle ~ \
+point}\>\"", ",", " ", 
+     RowBox[{"FontSize", "->", "14"}]}], "]"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"Print", "[", "\"\< \>\"", "]"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"MaTeX", "[", 
+    RowBox[{"\"\<\\\\mathrm{3. ~ eq. ~ point}\>\"", ",", " ", 
+     RowBox[{"FontSize", "->", "14"}]}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"J3", "=", 
+    RowBox[{"J", "/.", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"x", "->", "equ3x"}], ",", " ", 
+       RowBox[{"y", "->", "equ3y"}]}], "}"}]}]}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"tr3", "=", 
+     RowBox[{"Tr", "[", "J3", "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"det3", "=", 
+     RowBox[{"Det", "[", "J3", "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"eig3", "=", 
+    RowBox[{"Eigenvalues", "[", "J3", "]"}]}], "\[IndentingNewLine]", 
+   RowBox[{"vec3", "=", 
+    RowBox[{"Eigenvectors", "[", "J3", "]"}]}], "\[IndentingNewLine]", 
+   RowBox[{"MaTeX", "[", 
+    RowBox[{
+    "\"\<\\\\lambda_1 \\\\cdot \\\\lambda_2=0: \\\\mathrm{Linearization ~ \
+doesn't ~ work}\>\"", ",", " ", 
+     RowBox[{"FontSize", "->", "14"}]}], "]"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"Print", "[", "\"\< \>\"", "]"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"MaTeX", "[", 
+    RowBox[{"\"\<\\\\mathrm{4. ~ eq. ~ point}\>\"", ",", " ", 
+     RowBox[{"FontSize", "->", "14"}]}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"J4", "=", 
+    RowBox[{"J", "/.", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"x", "->", "equ4x"}], ",", " ", 
+       RowBox[{"y", "->", "equ4y"}]}], "}"}]}]}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"tr4", "=", 
+     RowBox[{"Tr", "[", "J4", "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"det4", "=", 
+     RowBox[{"Det", "[", "J4", "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"eig4", "=", 
+    RowBox[{"Eigenvalues", "[", "J4", "]"}]}], "\[IndentingNewLine]", 
+   RowBox[{"vec4", "=", 
+    RowBox[{"Eigenvectors", "[", "J4", "]"}]}], "\[IndentingNewLine]", 
+   RowBox[{"MaTeX", "[", 
+    RowBox[{
+    "\"\<\\\\lambda_1 \\\\cdot \\\\lambda_2=0: \\\\mathrm{Linearization ~ \
+doesn't ~ work}\>\"", ",", " ", 
+     RowBox[{"FontSize", "->", "14"}]}], "]"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"Print", "[", "\"\< \>\"", "]"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"MaTeX", "[", 
+    RowBox[{"\"\<\\\\mathrm{5. ~ eq. ~ point}\>\"", ",", " ", 
+     RowBox[{"FontSize", "->", "14"}]}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"J5", "=", 
+    RowBox[{"J", "/.", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"x", "->", "equ5x"}], ",", " ", 
+       RowBox[{"y", "->", "equ5y"}]}], "}"}]}]}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"tr5", "=", 
+     RowBox[{"Tr", "[", "J5", "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"det5", "=", 
+     RowBox[{"Det", "[", "J5", "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"eig5", "=", 
+    RowBox[{"Eigenvalues", "[", "J5", "]"}]}], "\[IndentingNewLine]", 
+   RowBox[{"vec5", "=", 
+    RowBox[{"Eigenvectors", "[", "J5", "]"}]}], "\[IndentingNewLine]", 
+   RowBox[{"MaTeX", "[", 
+    RowBox[{
+    "\"\<\\lambda_{1,2}=\\\\pm i \\\\cdot \\\\square: \\\\mathrm{Center}\>\"",
+      ",", " ", 
+     RowBox[{"FontSize", "->", "14"}]}], "]"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{{3.9211704504245925`*^9, 3.9211704723447614`*^9}, {
+   3.921170573647879*^9, 3.9211705805728965`*^9}, {3.9211706420039153`*^9, 
+   3.9211707120959826`*^9}, {3.921170768118102*^9, 3.9211709564927626`*^9}, 
+   3.9211710451680007`*^9, {3.92117116751388*^9, 3.921171373441187*^9}, {
+   3.9211714267848825`*^9, 3.921171458700965*^9}, {3.9211714980602913`*^9, 
+   3.921171599031996*^9}, {3.921171631397524*^9, 3.9211716936668606`*^9}, {
+   3.9211717306315355`*^9, 3.9211717646035304`*^9}, {3.921171817992363*^9, 
+   3.9211718561462517`*^9}, {3.9211721906036935`*^9, 
+   3.9211722497355046`*^9}, {3.9215013621206417`*^9, 3.9215013622797937`*^9}},
+ EmphasizeSyntaxErrors->True,
+ CellLabel->
+  "In[211]:=",ExpressionUUID->"21f64fa1-d715-48b9-90c8-17c7a2d9b719"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+    "Task", " ", "4.", " ", "Show", " ", "the", " ", "equilibrium", " ", 
+     "point", " ", "in", " ", "the", " ", "Trace"}], "-", 
+    RowBox[{"Det", " ", "plane"}]}], " ", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"trdet1", "=", 
+     RowBox[{"Plot", "[", 
+      RowBox[{
+       RowBox[{"2", "*", 
+        RowBox[{"Sqrt", "[", "x", "]"}]}], ",", 
+       RowBox[{"{", 
+        RowBox[{"x", ",", 
+         RowBox[{"-", "4"}], ",", "2"}], "}"}], ",", " ", 
+       RowBox[{"Evaluate", "@", "PBstyle"}], ",", " ", 
+       RowBox[{"PlotStyle", "->", 
+        RowBox[{"{", 
+         RowBox[{"Red", ",", " ", 
+          RowBox[{"Thickness", "[", "0.005", "]"}]}], " ", "}"}]}], ",", 
+       RowBox[{"PlotRange", "->", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"-", "4"}], ",", "2"}], "}"}], ",", " ", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"-", "4"}], ",", " ", "4"}], "}"}]}], "}"}]}], ",", " ", 
+       RowBox[{"AxesOrigin", "->", 
+        RowBox[{"{", 
+         RowBox[{"0", ",", "0"}], "}"}]}], ",", " ", 
+       RowBox[{"FrameLabel", "->", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{
+          "MaTeX", "[", "\"\<\\\\mathrm{det}(\\\\boldmath{J})\>\"", "]"}], 
+          ",", " ", 
+          RowBox[{
+          "MaTeX", "[", "\"\<\\\\mathrm{tr}(\\\\boldmath{J})\>\"", "]"}]}], 
+         "}"}]}], ",", " ", 
+       RowBox[{"ImageSize", "->", 
+        RowBox[{"{", 
+         RowBox[{"{", "300", "}"}], "}"}]}], ",", " ", 
+       RowBox[{"FrameTicksStyle", "->", 
+        RowBox[{"Directive", "[", 
+         RowBox[{
+          RowBox[{"FontOpacity", "->", "0"}], ",", 
+          RowBox[{"FontSize", "->", "0"}]}], "]"}]}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"trdet2", "=", 
+     RowBox[{"Plot", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", "2"}], "*", 
+        RowBox[{"Sqrt", "[", "x", "]"}]}], ",", 
+       RowBox[{"{", 
+        RowBox[{"x", ",", 
+         RowBox[{"-", "4"}], ",", "2"}], "}"}], ",", " ", 
+       RowBox[{"Evaluate", "@", "PBstyle"}], ",", " ", 
+       RowBox[{"PlotStyle", "->", 
+        RowBox[{"{", 
+         RowBox[{"Red", ",", " ", 
+          RowBox[{"Thickness", "[", "0.005", "]"}]}], " ", "}"}]}], ",", 
+       RowBox[{"PlotRange", "->", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"-", "4"}], ",", "2"}], "}"}], ",", " ", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"-", "4"}], ",", " ", "4"}], "}"}]}], "}"}]}], ",", " ", 
+       RowBox[{"AxesOrigin", "->", 
+        RowBox[{"{", 
+         RowBox[{"0", ",", "0"}], "}"}]}], ",", " ", 
+       RowBox[{"FrameLabel", "->", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{
+          "MaTeX", "[", "\"\<\\\\mathrm{det}(\\\\boldmath{J})\>\"", "]"}], 
+          ",", " ", 
+          RowBox[{
+          "MaTeX", "[", "\"\<\\\\mathrm{tr}(\\\\boldmath{J})\>\"", "]"}]}], 
+         "}"}]}], ",", " ", 
+       RowBox[{"ImageSize", "->", 
+        RowBox[{"{", 
+         RowBox[{"{", "300", "}"}], "}"}]}], ",", " ", 
+       RowBox[{"FrameTicksStyle", "->", 
+        RowBox[{"Directive", "[", 
+         RowBox[{
+          RowBox[{"FontOpacity", "->", "0"}], ",", 
+          RowBox[{"FontSize", "->", "0"}]}], "]"}]}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"eqplot2", "=", 
+     RowBox[{"ListPlot", "[", 
+      RowBox[{
+       RowBox[{"{", " ", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"-", "3.68"}], ",", "0"}], "}"}], ",", " ", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"-", "0.65"}], ",", 
+           RowBox[{"-", "0.4"}]}], "}"}], ",", " ", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", 
+           RowBox[{"-", "3"}]}], "}"}], ",", " ", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0"}], "}"}], ",", " ", 
+         RowBox[{"{", 
+          RowBox[{"1.25", ",", "0"}], "}"}]}], "}"}], ",", " ", 
+       RowBox[{"Evaluate", "@", "PBstyle"}], ",", 
+       RowBox[{"PlotStyle", "->", 
+        RowBox[{"{", 
+         RowBox[{"Black", ",", 
+          RowBox[{"PointSize", "[", "0.02", "]"}]}], "}"}]}], ",", 
+       RowBox[{"PlotRange", "->", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"Min", "[", "xticks", "]"}], ",", " ", 
+            RowBox[{"Max", "[", "xticks", "]"}]}], "}"}], ",", " ", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"Min", "[", "yticks", "]"}], ",", " ", 
+            RowBox[{"Max", "[", "yticks", "]"}]}], "}"}]}], "}"}]}], ",", " ", 
+       RowBox[{"AxesOrigin", "->", "origin"}], ",", " ", 
+       RowBox[{"FrameLabel", "->", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"MaTeX", "[", "xlabel", "]"}], ",", " ", 
+          RowBox[{"MaTeX", "[", "ylabel", "]"}]}], "}"}]}], ",", " ", 
+       RowBox[{"ImageSize", "->", 
+        RowBox[{"{", 
+         RowBox[{"{", "300", "}"}], "}"}]}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"Show", "[", 
+    RowBox[{"trdet1", ",", " ", "trdet2", ",", "eqplot2", ",", 
+     RowBox[{"ImageSize", "\[Rule]", 
+      RowBox[{"10", "cm"}]}]}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Export", "[", 
+     RowBox[{"\"\<task4_trdet.pdf\>\"", ",", " ", 
+      RowBox[{"Show", "[", 
+       RowBox[{"trdet1", ",", " ", "trdet2", ",", "eqplot2", ",", 
+        RowBox[{"ImageSize", "\[Rule]", 
+         RowBox[{"10", "cm"}]}]}], "]"}], ",", " ", 
+      RowBox[{"ImageResolution", "->", "1000"}]}], "]"}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{{3.921403986862051*^9, 3.9214040253754244`*^9}, {
+   3.9214040571778092`*^9, 3.9214043488873568`*^9}, {3.9214044341845474`*^9, 
+   3.9214046390108805`*^9}, {3.921404673583579*^9, 3.9214046898928185`*^9}, 
+   3.9214047294640303`*^9, {3.9214047989446907`*^9, 3.921404867697896*^9}, {
+   3.9214052039831944`*^9, 3.9214052480111275`*^9}, {3.921407095356366*^9, 
+   3.921407104130404*^9}, {3.92140716446821*^9, 3.921407196858816*^9}, {
+   3.9214072449727964`*^9, 3.9214073653660965`*^9}, {3.9214074586440616`*^9, 
+   3.921407510418944*^9}, {3.921579008353778*^9, 3.9215790201974454`*^9}, {
+   3.9215790675085526`*^9, 3.9215790773882966`*^9}, {3.9215791830347767`*^9, 
+   3.921579310991639*^9}, {3.9215793632869635`*^9, 3.9215793784404554`*^9}, {
+   3.9215795636596127`*^9, 3.9215795961465244`*^9}, {3.921579685033648*^9, 
+   3.9215796877604165`*^9}, {3.9215814279079666`*^9, 3.921581432640606*^9}, {
+   3.9215814632605867`*^9, 3.9215814980890455`*^9}},
+ CellLabel->
+  "In[174]:=",ExpressionUUID->"0423a4f7-9e63-49f0-8575-3bfe4cba4d65"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "Task", " ", "6.", " ", "Phase", " ", "portrait", " ", "of", " ", "the", 
+    " ", "system"}], " ", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"xticks", "=", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "20"}], ",", "20"}], "}"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"yticks", "=", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "20"}], ",", "20"}], "}"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"xlabel", "=", "\"\<\\\\dot{x}\>\""}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"ylabel", "=", "\"\<\\\\dot{y}\>\""}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"phaseportrait", "=", 
+     RowBox[{"VectorPlot", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"f", "[", 
+          RowBox[{"x", ",", "y"}], "]"}], ",", 
+         RowBox[{"g", "[", 
+          RowBox[{"x", ",", "y"}], "]"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"x", ",", 
+         RowBox[{"-", "20"}], ",", "20"}], "}"}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{"y", ",", 
+         RowBox[{"-", "20"}], ",", "20"}], "}"}], ",", " ", 
+       RowBox[{"VectorColorFunction", "->", "None"}], ",", 
+       RowBox[{"VectorStyle", "->", 
+        RowBox[{"Opacity", "[", 
+         RowBox[{"0.5", ",", "Black"}], "]"}]}], ",", 
+       RowBox[{"VectorSizes", "->", "Small"}], ",", " ", 
+       RowBox[{"VectorPoints", "->", "28"}], ",", " ", 
+       RowBox[{"StreamStyle", "->", 
+        RowBox[{"{", 
+         RowBox[{"Red", ",", 
+          RowBox[{"Thickness", "[", "0.003", "]"}], ",", " ", 
+          "\"\<Segment\>\""}], "}"}]}], ",", " ", 
+       RowBox[{"StreamPoints", "->", "25"}], ",", " ", 
+       RowBox[{"StreamColorFunction", "->", "None"}], ",", " ", 
+       RowBox[{"Evaluate", "@", "PBstyle"}], ",", " ", 
+       RowBox[{"PlotRange", "->", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"Min", "[", "xticks", "]"}], ",", " ", 
+            RowBox[{"Max", "[", "xticks", "]"}]}], "}"}], ",", " ", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"Min", "[", "yticks", "]"}], ",", " ", 
+            RowBox[{"Max", "[", "yticks", "]"}]}], "}"}]}], "}"}]}], ",", " ", 
+       RowBox[{"FrameLabel", "->", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"MaTeX", "[", "xlabel", "]"}], ",", " ", 
+          RowBox[{"MaTeX", "[", "ylabel", "]"}]}], "}"}]}], ",", " ", 
+       RowBox[{"ImageSize", "->", 
+        RowBox[{"{", 
+         RowBox[{"{", "300", "}"}], "}"}]}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"eqplot", "=", 
+     RowBox[{"ListPlot", "[", 
+      RowBox[{
+       RowBox[{"{", " ", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"equilibpoints", "[", 
+            RowBox[{"[", 
+             RowBox[{"1", ",", "1", ",", "2"}], "]"}], "]"}], ",", 
+           RowBox[{"equilibpoints", "[", 
+            RowBox[{"[", 
+             RowBox[{"1", ",", "2", ",", "2"}], "]"}], "]"}]}], "}"}], ",", 
+         " ", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"equilibpoints", "[", 
+            RowBox[{"[", 
+             RowBox[{"2", ",", "1", ",", "2"}], "]"}], "]"}], ",", 
+           RowBox[{"equilibpoints", "[", 
+            RowBox[{"[", 
+             RowBox[{"2", ",", "2", ",", "2"}], "]"}], "]"}]}], "}"}], ",", 
+         " ", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"equilibpoints", "[", 
+            RowBox[{"[", 
+             RowBox[{"3", ",", "1", ",", "2"}], "]"}], "]"}], ",", 
+           RowBox[{"equilibpoints", "[", 
+            RowBox[{"[", 
+             RowBox[{"3", ",", "2", ",", "2"}], "]"}], "]"}]}], "}"}], ",", 
+         " ", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"equilibpoints", "[", 
+            RowBox[{"[", 
+             RowBox[{"4", ",", "1", ",", "2"}], "]"}], "]"}], ",", 
+           RowBox[{"equilibpoints", "[", 
+            RowBox[{"[", 
+             RowBox[{"4", ",", "2", ",", "2"}], "]"}], "]"}]}], "}"}], ",", 
+         " ", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"equilibpoints", "[", 
+            RowBox[{"[", 
+             RowBox[{"5", ",", "1", ",", "2"}], "]"}], "]"}], ",", 
+           RowBox[{"equilibpoints", "[", 
+            RowBox[{"[", 
+             RowBox[{"5", ",", "2", ",", "2"}], "]"}], "]"}]}], "}"}]}], 
+        "}"}], ",", " ", 
+       RowBox[{"Evaluate", "@", "PBstyle"}], ",", 
+       RowBox[{"PlotStyle", "->", 
+        RowBox[{"{", 
+         RowBox[{"Black", ",", 
+          RowBox[{"PointSize", "[", "0.015", "]"}]}], "}"}]}], ",", 
+       RowBox[{"PlotRange", "->", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"Min", "[", "xticks", "]"}], ",", " ", 
+            RowBox[{"Max", "[", "xticks", "]"}]}], "}"}], ",", " ", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"Min", "[", "yticks", "]"}], ",", " ", 
+            RowBox[{"Max", "[", "yticks", "]"}]}], "}"}]}], "}"}]}], ",", " ", 
+       RowBox[{"AxesOrigin", "->", "origin"}], ",", " ", 
+       RowBox[{"FrameLabel", "->", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"MaTeX", "[", "xlabel", "]"}], ",", " ", 
+          RowBox[{"MaTeX", "[", "ylabel", "]"}]}], "}"}]}], ",", " ", 
+       RowBox[{"ImageSize", "->", 
+        RowBox[{"{", 
+         RowBox[{"{", "300", "}"}], "}"}]}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"Show", "[", 
+    RowBox[{"phaseportrait", ",", "eqplot", ",", 
+     RowBox[{"ImageSize", "\[Rule]", 
+      RowBox[{"10", "cm"}]}]}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Export", "[", 
+     RowBox[{"\"\<task6_phaseportrait.pdf\>\"", ",", " ", 
+      RowBox[{"Show", "[", 
+       RowBox[{"phaseportrait", ",", "eqplot", ",", 
+        RowBox[{"ImageSize", "\[Rule]", 
+         RowBox[{"10", "cm"}]}]}], "]"}], ",", " ", 
+      RowBox[{"ImageResolution", "->", "1000"}]}], "]"}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"xticks", "=", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "5"}], ",", "5"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"yticks", "=", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "5"}], ",", "5"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"xlabel", "=", "\"\<\\\\dot{x}\>\""}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"ylabel", "=", "\"\<\\\\dot{y}\>\""}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"phaseportrait", "=", 
+     RowBox[{"VectorPlot", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"f", "[", 
+          RowBox[{"x", ",", "y"}], "]"}], ",", 
+         RowBox[{"g", "[", 
+          RowBox[{"x", ",", "y"}], "]"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"x", ",", 
+         RowBox[{"-", "5"}], ",", "5"}], "}"}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{"y", ",", 
+         RowBox[{"-", "5"}], ",", "5"}], "}"}], ",", " ", 
+       RowBox[{"VectorColorFunction", "->", "None"}], ",", 
+       RowBox[{"VectorStyle", "->", 
+        RowBox[{"Opacity", "[", 
+         RowBox[{"0.5", ",", "Black"}], "]"}]}], ",", 
+       RowBox[{"VectorSizes", "->", "Small"}], ",", " ", 
+       RowBox[{"VectorPoints", "->", "28"}], ",", " ", 
+       RowBox[{"StreamStyle", "->", 
+        RowBox[{"{", 
+         RowBox[{"Red", ",", 
+          RowBox[{"Thickness", "[", "0.003", "]"}], ",", " ", 
+          "\"\<Segment\>\""}], "}"}]}], ",", " ", 
+       RowBox[{"StreamPoints", "->", "20"}], ",", " ", 
+       RowBox[{"StreamColorFunction", "->", "None"}], ",", " ", 
+       RowBox[{"Evaluate", "@", "PBstyle"}], ",", " ", 
+       RowBox[{"PlotRange", "->", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"Min", "[", "xticks", "]"}], ",", " ", 
+            RowBox[{"Max", "[", "xticks", "]"}]}], "}"}], ",", " ", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"Min", "[", "yticks", "]"}], ",", " ", 
+            RowBox[{"Max", "[", "yticks", "]"}]}], "}"}]}], "}"}]}], ",", " ", 
+       RowBox[{"FrameLabel", "->", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"MaTeX", "[", "xlabel", "]"}], ",", " ", 
+          RowBox[{"MaTeX", "[", "ylabel", "]"}]}], "}"}]}], ",", " ", 
+       RowBox[{"ImageSize", "->", 
+        RowBox[{"{", 
+         RowBox[{"{", "300", "}"}], "}"}]}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"eqplot", "=", 
+     RowBox[{"ListPlot", "[", 
+      RowBox[{
+       RowBox[{"{", " ", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"equilibpoints", "[", 
+            RowBox[{"[", 
+             RowBox[{"1", ",", "1", ",", "2"}], "]"}], "]"}], ",", 
+           RowBox[{"equilibpoints", "[", 
+            RowBox[{"[", 
+             RowBox[{"1", ",", "2", ",", "2"}], "]"}], "]"}]}], "}"}], ",", 
+         " ", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"equilibpoints", "[", 
+            RowBox[{"[", 
+             RowBox[{"2", ",", "1", ",", "2"}], "]"}], "]"}], ",", 
+           RowBox[{"equilibpoints", "[", 
+            RowBox[{"[", 
+             RowBox[{"2", ",", "2", ",", "2"}], "]"}], "]"}]}], "}"}], ",", 
+         " ", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"equilibpoints", "[", 
+            RowBox[{"[", 
+             RowBox[{"3", ",", "1", ",", "2"}], "]"}], "]"}], ",", 
+           RowBox[{"equilibpoints", "[", 
+            RowBox[{"[", 
+             RowBox[{"3", ",", "2", ",", "2"}], "]"}], "]"}]}], "}"}], ",", 
+         " ", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"equilibpoints", "[", 
+            RowBox[{"[", 
+             RowBox[{"4", ",", "1", ",", "2"}], "]"}], "]"}], ",", 
+           RowBox[{"equilibpoints", "[", 
+            RowBox[{"[", 
+             RowBox[{"4", ",", "2", ",", "2"}], "]"}], "]"}]}], "}"}], ",", 
+         " ", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"equilibpoints", "[", 
+            RowBox[{"[", 
+             RowBox[{"5", ",", "1", ",", "2"}], "]"}], "]"}], ",", 
+           RowBox[{"equilibpoints", "[", 
+            RowBox[{"[", 
+             RowBox[{"5", ",", "2", ",", "2"}], "]"}], "]"}]}], "}"}]}], 
+        "}"}], ",", " ", 
+       RowBox[{"Evaluate", "@", "PBstyle"}], ",", 
+       RowBox[{"PlotStyle", "->", 
+        RowBox[{"{", 
+         RowBox[{"Black", ",", 
+          RowBox[{"PointSize", "[", "0.015", "]"}]}], "}"}]}], ",", 
+       RowBox[{"PlotRange", "->", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"Min", "[", "xticks", "]"}], ",", " ", 
+            RowBox[{"Max", "[", "xticks", "]"}]}], "}"}], ",", " ", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"Min", "[", "yticks", "]"}], ",", " ", 
+            RowBox[{"Max", "[", "yticks", "]"}]}], "}"}]}], "}"}]}], ",", " ", 
+       RowBox[{"AxesOrigin", "->", "origin"}], ",", " ", 
+       RowBox[{"FrameLabel", "->", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"MaTeX", "[", "xlabel", "]"}], ",", " ", 
+          RowBox[{"MaTeX", "[", "ylabel", "]"}]}], "}"}]}], ",", " ", 
+       RowBox[{"ImageSize", "->", 
+        RowBox[{"{", 
+         RowBox[{"{", "300", "}"}], "}"}]}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"Show", "[", 
+    RowBox[{"phaseportrait", ",", "eqplot", ",", 
+     RowBox[{"ImageSize", "\[Rule]", 
+      RowBox[{"10", "cm"}]}]}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Export", "[", 
+     RowBox[{"\"\<task6_phaseportrait_2.pdf\>\"", ",", " ", 
+      RowBox[{"Show", "[", 
+       RowBox[{"phaseportrait", ",", "eqplot", ",", 
+        RowBox[{"ImageSize", "\[Rule]", 
+         RowBox[{"10", "cm"}]}]}], "]"}], ",", " ", 
+      RowBox[{"ImageResolution", "->", "1000"}]}], "]"}], ";"}]}]}]], "Input",
+ CellChangeTimes->{{3.92108308627347*^9, 3.9210831344109445`*^9}, {
+  3.9210831971169415`*^9, 3.9210832418106427`*^9}, {3.9210832757516856`*^9, 
+  3.9210832888881984`*^9}, {3.921083390577083*^9, 3.921083393719971*^9}, {
+  3.9210835310378075`*^9, 3.921083861693738*^9}, {3.9210839413561277`*^9, 
+  3.921084017548089*^9}, {3.9210840886620727`*^9, 3.921084146975049*^9}, {
+  3.9210841910016775`*^9, 3.9210842415393333`*^9}, {3.9211720265478945`*^9, 
+  3.921172036299984*^9}, {3.921509677816491*^9, 3.921509679466504*^9}, {
+  3.9215097204561586`*^9, 3.9215097554665384`*^9}},
+ CellLabel->"In[77]:=",ExpressionUUID->"4c71d575-37fa-45ee-8280-28aa7e217d47"]
+},
+WindowSize->{1440., 747.75},
+WindowMargins->{{1434, Automatic}, {Automatic, -6}},
+PrintingCopies->1,
+PrintingPageRange->{Automatic, Automatic},
+PrintingOptions->{"Magnification"->1.,
+"PaperOrientation"->"Portrait",
+"PaperSize"->{595.2755905511812, 841.8897637795276}},
+Magnification:>1.3 Inherited,
+FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 30, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"0893fdeb-12f9-49fc-9603-90e1180300a2"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 1231, 29, 161, "Input",ExpressionUUID->"906765b6-40b8-44bb-a63e-c3e9e96a3f42"],
+Cell[1792, 51, 1022, 31, 87, "Input",ExpressionUUID->"7a873371-c13c-4f57-b8ac-69a9da35f07c"],
+Cell[2817, 84, 1316, 32, 161, "Input",ExpressionUUID->"e2d3043b-5b53-4fb5-ac4a-7faeeedd0061"],
+Cell[4136, 118, 14682, 367, 1076, "Input",ExpressionUUID->"b26233b3-721f-40dd-9a69-05ee6eb948ed"],
+Cell[18821, 487, 7473, 182, 1348, "Input",ExpressionUUID->"21f64fa1-d715-48b9-90c8-17c7a2d9b719"],
+Cell[26297, 671, 6852, 171, 408, "Input",ExpressionUUID->"0423a4f7-9e63-49f0-8575-3bfe4cba4d65"],
+Cell[33152, 844, 12819, 328, 952, "Input",ExpressionUUID->"4c71d575-37fa-45ee-8280-28aa7e217d47"]
+}
+]
+*)
+
